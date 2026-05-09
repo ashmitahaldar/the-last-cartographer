@@ -41,6 +41,10 @@ const LINES: { file: string; text: string; mood: keyof typeof VOICE_SETTINGS }[]
   { file: "end_closed_1.mp3",   mood: "cold",    text: "I think we're done here." },
   { file: "end_closed_2.mp3",   mood: "cold",    text: "The King's Road south is still passable. The toll collectors are unpleasant, but they're predictable. That's worth something." },
   { file: "end_closed_3.mp3",   mood: "cold",    text: "Safe travels." },
+  // Late shift
+  { file: "lateshift_1.mp3",    mood: "warm",    text: "You ask better questions than most people who come through here." },
+  { file: "lateshift_2.mp3",    mood: "warm",    text: "The town's been emptying for three years. Every month, fewer faces. People used to come in just to talk. Not about routes. Just — talk." },
+  { file: "lateshift_3.mp3",    mood: "warm",    text: "I'd forgotten what that was like." },
   // Ending — Confession
   { file: "end_confess_1.mp3",  mood: "warm",    text: "His name was Davan. He was twenty-two. I taught him everything I knew about reading terrain, about the difference between what a map says and what the land is." },
   { file: "end_confess_2.mp3",  mood: "warm",    text: "He wasn't greedy. That's the part I've never been able to make fit. He was just — he was offered a way out of here, and he took it. I would have helped him leave if he'd asked." },

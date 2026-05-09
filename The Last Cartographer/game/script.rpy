@@ -35,6 +35,7 @@ label start:
     $ conversation_history = []
     $ mid_shift_played = False
     $ confrontation_played = False
+    $ late_shift_played = False
     $ turn_count = 0
     $ mara_inner = ""
 
@@ -81,6 +82,11 @@ label conversation_loop:
         $ mid_shift_played = True
         jump mid_shift
 
+    if npc_state["trust"] >= 70 and not late_shift_played and mid_shift_played and turn_count >= 6:
+        $ late_shift_played = True
+        jump late_shift
+
+    $ _hint_turn = turn_count
     $ raw_input = renpy.input("What do you say to Mara?", length=300)
     $ player_input = raw_input.strip() if raw_input else ""
 
@@ -161,6 +167,25 @@ label mid_shift:
 
     voice "audio/midshift_3.mp3"
     mara "I don't know what you are yet. But I'm starting to think you might be honest. I've been wrong before."
+
+    jump conversation_loop
+
+
+label late_shift:
+    show mara warm
+
+    voice "audio/lateshift_1.mp3"
+    mara "You ask better questions than most people who come through here."
+
+    "She doesn't elaborate. She goes back to her work for a moment, then stops."
+
+    voice "audio/lateshift_2.mp3"
+    mara "The town's been emptying for three years. Every month, fewer faces. People used to come in just to talk. Not about routes. Just — talk."
+
+    "The scratch of her pen. A long pause."
+
+    voice "audio/lateshift_3.mp3"
+    mara "I'd forgotten what that was like."
 
     jump conversation_loop
 

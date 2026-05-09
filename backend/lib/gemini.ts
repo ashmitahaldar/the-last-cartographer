@@ -17,7 +17,7 @@ export async function callMara(
   history: Message[]
 ): Promise<Omit<MaraResponse, "audio_url">> {
   const model = genai.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.0-flash",
     systemInstruction: buildSystemPrompt(npcState),
   });
 

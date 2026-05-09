@@ -46,3 +46,6 @@ screen state_hud():
             if npc_state["lie_count"] > 0:
                 null height 4
                 text "Lies caught: [npc_state['lie_count']]" size 19 color "#cc4444"
+            if npc_state["unlocks"]:
+                null height 4
+                text "Unlocked: [', '.join(npc_state['unlocks'])]" size 19 color "#55cc99"
