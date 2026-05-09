@@ -31,7 +31,7 @@ export async function callMara(
     ];
 
     const completion = await getClient().chat.completions.create({
-      model: "gpt-4o",
+      model: (process.env.OPENAI_MODEL as string) || "gpt-4o-mini",
       messages,
       response_format: { type: "json_object" },
       temperature: 0.85,

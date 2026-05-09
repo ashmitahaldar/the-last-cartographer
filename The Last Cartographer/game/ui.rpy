@@ -132,7 +132,7 @@ screen title_screen():
                     color "#6a5c48"
 
         # Bottom-right version stamp
-        text "The Last Cartographer  *  2026":
+        text "The Last Cartographer  *  v1.1":
             xalign 0.98
             yalign 0.98
             size 13
@@ -174,16 +174,16 @@ screen input(prompt):
                     spacing 14
 
                     if _turn < 3:
-                        textbutton "\"I need to cross the pass.\"" style "hint_button" action Return("I need to cross the Northern Pass. I was told you're the only one who knows the safe route.")
-                        textbutton "\"How long have you been here?\"" style "hint_button" action Return("How long have you been the cartographer here?")
-                        textbutton "\"Something's wrong with the trail signs.\"" style "hint_button" action Return("I heard the trail signs have been tampered with. Do you know anything about that?")
+                        textbutton "\"I need to cross the pass.\"" style "hint_button" action Return("I need to cross the Northern Pass.")
+                        textbutton "\"How long have you been here?\"" style "hint_button" action Return("How long have you been here?")
+                        textbutton "\"The trail signs —\"" style "hint_button" action Return("I heard something's wrong with the trail signs.")
                     elif _turn < 6:
-                        textbutton "\"Your apprentice —\"" style "hint_button" action Return("What happened to your apprentice? You didn't finish.")
-                        textbutton "\"I've made mistakes with trust too.\"" style "hint_button" action Return("I've made mistakes with trust. Someone I relied on used information I gave them to hurt others. I've never fully forgiven myself.")
-                        textbutton "\"Why is this town emptying?\"" style "hint_button" action Return("This town feels like it's draining out. What happened to it?")
+                        textbutton "\"Your apprentice —\"" style "hint_button" action Return("Your apprentice. What happened?")
+                        textbutton "\"I've made mistakes too.\"" style "hint_button" action Return("I've made mistakes I haven't been able to put down. With trust, mostly.")
+                        textbutton "\"This town feels empty.\"" style "hint_button" action Return("This town feels like it's emptying out.")
                     else:
-                        textbutton "\"That cost you more than a route.\"" style "hint_button" action Return("That sounds like it cost you more than just the route.")
-                        textbutton "\"Why did you stay?\"" style "hint_button" action Return("Why did you stay here, when others left?")
+                        textbutton "\"That wasn't easy to say.\"" style "hint_button" action Return("That wasn't easy to say.")
+                        textbutton "\"Why did you stay?\"" style "hint_button" action Return("Why did you stay?")
                         textbutton "\"I should go.\"" style "hint_button" action Return("leave")
 
                 hbox:

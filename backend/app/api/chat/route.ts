@@ -13,6 +13,8 @@ export async function OPTIONS() {
   return new Response(null, { status: 204, headers: CORS });
 }
 
+const MAX_TURNS = 15;
+
 export async function POST(request: NextRequest) {
   try {
     const { input, npc_state, history } = (await request.json()) as {
@@ -20,6 +22,18 @@ export async function POST(request: NextRequest) {
       npc_state: NpcState;
       history: Message[];
     };
+
+    if (history.length / 2 >= MAX_TURNS) {
+      return Response.json(
+        {
+          ...FALLBACK_RESPONSE,
+          dialogue: "The hour is late. I have work to finish. Safe travels.",
+          mood: "cold",
+          audio_url: null,
+        },
+        { headers: CORS }
+      );
+    }
 
     const maraResponse = await callMara(input, npc_state, history);
     const audio_url = await generateSpeech(maraResponse.dialogue, maraResponse.mood);

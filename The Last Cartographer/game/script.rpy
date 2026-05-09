@@ -135,6 +135,9 @@ label conversation_loop:
     if pending_ending == "ending_closed":
         jump ending_closed
 
+    if turn_count >= 15:
+        jump resolve_ending
+
     jump conversation_loop
 
 
