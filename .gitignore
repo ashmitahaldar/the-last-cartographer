@@ -16,3 +16,8 @@ backend/.next/
 # Ren'Py
 *.rpyc
 *.rpymc
+
+# Ren'Py build output
+TheLastCartographer-*-dists/
+"The Last Cartographer/log.txt"
+"The Last Cartographer/tmp/"
