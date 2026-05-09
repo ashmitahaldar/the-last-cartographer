@@ -1010,8 +1010,24 @@ screen help():
 screen keyboard_help():
 
     hbox:
+        label _("Talking to Mara")
+        text _("Type your message and press Enter to speak. She will respond.")
+
+    hbox:
+        label _("Leaving")
+        text _("Type 'leave', 'goodbye', or 'farewell' to end the conversation. The ending you receive depends on how the conversation went.")
+
+    hbox:
+        label _("Winning her trust")
+        text _("Be honest. Ask about the town, not just the pass. Notice things. Admit what you don't know. Mara respects consistency — she tracks everything you say.")
+
+    hbox:
+        label _("Losing her trust")
+        text _("Lie, contradict yourself, or ask about the route too early. She will notice. She does not forgive.")
+
+    hbox:
         label _("Enter")
-        text _("Advances dialogue and activates the interface.")
+        text _("Submit your message / advance dialogue.")
 
     hbox:
         label _("Space")

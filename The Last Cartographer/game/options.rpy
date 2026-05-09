@@ -30,6 +30,18 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+    Developed by Ashmita H. for AI Engineer Hackathon Singapore 2026.
+
+    Veldthorn. End of the road.
+
+    You need to cross the Northern Pass — the only safe route through the mountains. One person in this dying
+  town knows the way. She doesn't share it with strangers.
+
+    Mara Voss is not a dialogue tree. She's a live AI with memory, suspicion, and wounds she doesn't talk about.
+    Every word you type is weighed. She notices what you ask — and what you don't. She remembers if you
+    contradict yourself.
+
+    What she tells you depends on who you are to her by the time you leave.
 """)
 
 
@@ -62,7 +74,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/music/neutral.mp3"
 
 
 ## Transitions #################################################################

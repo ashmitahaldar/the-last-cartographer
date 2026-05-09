@@ -5,10 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate:audio": "npx tsx scripts/generate-audio.ts",
+    "generate:music": "npx tsx scripts/generate-music.ts",
+    "generate:sprites": "npx tsx scripts/generate-sprites.ts"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.4.2",
+    "google-auth-library": "^10.6.2",
     "next": "16.2.6",
+    "openai": "^6.37.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },

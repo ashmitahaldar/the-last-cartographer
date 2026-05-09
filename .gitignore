@@ -1,0 +1,18 @@
+# Secrets
+backend/.env.local
+backend/.env
+backend/gen-lang-client-*.json
+
+# Dependencies
+backend/node_modules/
+
+# Build output
+backend/.next/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Ren'Py
+*.rpyc
+*.rpymc
