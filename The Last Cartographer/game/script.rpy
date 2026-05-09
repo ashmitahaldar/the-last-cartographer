@@ -74,7 +74,7 @@ label start:
 
 label conversation_loop:
 
-    if npc_state["lie_count"] >= 2 and not confrontation_played:
+    if npc_state["lie_count"] >= 3 and not confrontation_played:
         $ confrontation_played = True
         jump confrontation
 
